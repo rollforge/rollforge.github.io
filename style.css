@@ -33,83 +33,129 @@ body {
     padding: 1rem;
 }
 
-/* Navbar styles */
+/*--------------------- Barra de Navegação da Página: nav -------------------------*/
 
-.navbar {
-    background-color: var(--primary);
-    padding: 1rem;
-}
-
-.navbar-container {
+nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 100%;
+    padding: 25px 8% 2%;
+    position: sticky;
 }
 
-.navbar-logo img {
-    width: 42px;
-    margin: auto;
-}
-
-.navbar-menu {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    align-content: center;
-    text-align: center;
-}
-
-.navbar-item {
-    margin-left: 1.5rem;
-}
-
-.navbar-link {
-    color: var(--primary-foreground);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.navbar-link:hover {
-    color: var(--accent);
-}
-
-.navbar-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--primary-foreground);
-    font-size: 1.5rem;
+.logo {
+    color: #000000;
+    width: 90px;
+    letter-spacing: 1px;
     cursor: pointer;
+    margin-right: 50px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 15px;
+}
+
+nav ul li a {
+    color: #424242;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 22px
+}
+
+nav ul li a:hover {
+    color: #000000;
+    transition: .4s;
+    transform: scale(1.1,1.1);
+}
+
+/*-------------------------- Continuação da Barra de navegação + botão da Main -------------------------------*/
+
+.contact-btn {
+    background-color: #424242;
+    color: #fff;
+    text-decoration: none;
+    border: transparent;
+    font-weight: lighter;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 9px;
+    transition: .5s ease;
+}
+
+.contact-btn:hover {
+    background-color: #000000;
+    border: transparent;
+    color: #fff;
+    cursor: pointer
+}
+
+/*---------------------------- Barra de Navegação do Menu Mobile: .menumobile ------------------------------*/
+
+.menumobile {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #000000;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.menumobile::before,
+.menumobile::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #000000;
+    margin-top: 5px;
+    position: relative;
+    transition: .4s;
+}
+
+.nav-login-buttons-alt {
+    display: none;
 }
 
 @media (max-width: 768px) {
 
-    .navbar-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: var(--primary);
-        padding: 1rem;
-    }
+   /* Active Nav Properties */
 
-    .navbar-menu.active {
+
+    .nav.active .nav-login-buttons-alt {
         display: flex;
-        transition: .4s linear;
+        align-items: center;
+        margin: 30px 0 0;
+        justify-content: space-around;
+        transition: 1s;
+        position: fixed;
     }
 
-    .navbar-item {
-        margin: 0.5rem 0;
+    .nav.active .nav-list {
+        clip-path: circle(15000px at 90% -15%);
+        pointer-events: all;
     }
 
-    .navbar-toggle {
-        display: block;
+    .nav.active .nav-list a {
+        opacity: 1;
     }
+
+    .nav.active .menumobile {
+        border-top-color: transparent;
+    }
+
+    .nav.active .menumobile::before {
+        transform: rotate(135deg);
+    }
+
+    .nav.active .menumobile::after {
+        transform: rotate(-135deg);
+        margin-top: -5px;
+    }
+}
 }
