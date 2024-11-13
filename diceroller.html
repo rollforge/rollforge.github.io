@@ -43,54 +43,68 @@
             <div class="form-group">
                 <label for="dice-type">Dice Type:</label>
                 <select id="dice-type" class="select">
+                    <option value="D2">D2</option>
+                    <option value="D3">D3</option>
+                    <option value="D4">D4</option>
                     <option value="D6">D6</option>
-                <option value="D20" selected>D20</option>
-                <option value="D100">D100</option>
-            </select>
-        </div>
-        
-        <div class="form-group">
-            <label for="number-of-rolls">Number of Rolls:</label>
-            <input id="number-of-rolls" class="input" type="number" min="1" value="1">
-        </div>
-        
-        <div class="form-group">
-            <label for="modifier">Modifier:</label>
-            <input id="modifier" class="input" type="number" value="0">
-        </div>
-        
-        <div class="form-group">
-            <label class="switch">
-                <input type="checkbox" id="advantage">
-                <span class="slider"></span>
-            </label>
-            <span>Advantage</span>
-        </div>
-        
-        <div class="form-group">
-            <label class="switch">
-                <input type="checkbox" id="disadvantage">
-                <span class="slider"></span>
-            </label>
-            <span>Disadvantage</span>
-        </div>
-        
-        <button id="roll-button" class="button">
-            Roll Dice
-        </button>
-        
-        <div id="results" class="results" style="display: none;">
-            <h2>Results:</h2>
-            <div id="dice-results" class="dice-results"></div>
-            <p id="total-result"></p>
-        </div>
-        
-        <div>
-            <div class="flex justify-between items-center mb-2">
-                <h2>Roll History:</h2>
-                <button id="clear-history" class="button outline-button">Clear History</button>
+                    <option value="D8">D8</option>
+                    <option value="D10">D10</option>
+                    <option value="D12">D12</option>
+                    <option value="D20" selected>D20</option>
+                    <option value="D100">D100</option>
+                    <option value="custom">Custom</option>
+                </select>
             </div>
-            <div id="history" class="history"></div>
+    
+            <div id="custom-dice" class="form-group" style="display: none;">
+                <label for="custom-dice-value">Custom Dice (max value):</label>
+                <input id="custom-dice-value" class="input" type="number" min="2" value="20">
+            </div>
+    
+            <div class="form-group">
+                <label for="number-of-rolls">Number of Rolls:</label>
+                <input id="number-of-rolls" class="input" type="number" min="1" value="1">
+            </div>
+    
+            <div class="form-group">
+                <label for="modifier">Modifier:</label>
+                <input id="modifier" class="input" type="number" value="0">
+            </div>
+    
+            <div class="switch-container">
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="advantage">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Advantage</span>
+                </div>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="disadvantage">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Disadvantage</span>
+                </div>
+            </div>
+    
+            <button id="roll-button" class="button">
+                Roll Dice
+            </button>
+    
+            <div id="results" class="results" style="display: none;">
+                <h2>Results:</h2>
+                <div id="dice-results" class="dice-results"></div>
+                <p id="total-result"></p>
+            </div>
+    
+            <div class="history-container">
+                <div class="history-header">
+                    <h2 class="history-title">Roll History:</h2>
+                    <button id="clear-history" class="clear-history">Clear History</button>
+                </div>
+                <div id="history" class="history"></div>
+            </div>
         </div>
     </main>
     
