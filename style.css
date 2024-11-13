@@ -1,0 +1,106 @@
+*{
+    transition: .4s;
+    overflow-x: hidden;
+}
+
+:root {
+    --background: #fcf7e4;
+    --foreground: #1d2a37;
+    --primary: #1d2a37;
+    --primary-foreground: #fcf7e4;
+    --secondary: #d4d2c5;
+    --secondary-foreground: #1d2a37;
+    --border: #a8a69d;
+    --accent: #c78c60;
+    --accent-dark: #3b5b4b;
+    --radius: 0.5rem;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Navbar styles */
+
+.navbar {
+    background-color: var(--primary);
+    padding: 1rem;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo img {
+    width: 42px;
+    margin: auto;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+    text-align: center;
+}
+
+.navbar-item {
+    margin-left: 1rem;
+}
+
+.navbar-link {
+    color: var(--primary-foreground);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-foreground);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary);
+        padding: 1rem;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        transition: .4s linear;
+    }
+
+    .navbar-item {
+        margin: 0.5rem 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+}

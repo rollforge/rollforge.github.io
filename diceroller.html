@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Insert de metadados -->
+
+<head>
+    <meta charset="UTF-8" lang="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links dos Stylesheets para personalização das páginas e Shortcut Icon -->
+    
+    <link rel="stylesheet" type="text/css" href="/diceroller.css">
+    
+    <link rel="shortcut icon" href="/logoheader.png">
+
+    <!-- Título da Página -->
+    
+    <title>RollForge Dice</title>
+</head>
+
+<!----------------------------------------------- Construção da Página HTML: body ----------------------------------------------------------->
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo"><img src="/logoheader.png"></a>
+                <button class="navbar-toggle" id="navbar-toggle">☰</button>
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li class="navbar-item"><a href="/index.html" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">DiceRoller</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Configurações</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>RollForge Dice</h1>
+            
+            <div class="form-group">
+                <label for="dice-type">Dice Type:</label>
+                <select id="dice-type" class="select">
+                    <option value="D6">D6</option>
+                <option value="D20" selected>D20</option>
+                <option value="D100">D100</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="number-of-rolls">Number of Rolls:</label>
+            <input id="number-of-rolls" class="input" type="number" min="1" value="1">
+        </div>
+        
+        <div class="form-group">
+            <label for="modifier">Modifier:</label>
+            <input id="modifier" class="input" type="number" value="0">
+        </div>
+        
+        <div class="form-group">
+            <label class="switch">
+                <input type="checkbox" id="advantage">
+                <span class="slider"></span>
+            </label>
+            <span>Advantage</span>
+        </div>
+        
+        <div class="form-group">
+            <label class="switch">
+                <input type="checkbox" id="disadvantage">
+                <span class="slider"></span>
+            </label>
+            <span>Disadvantage</span>
+        </div>
+        
+        <button id="roll-button" class="button">
+            Roll Dice
+        </button>
+        
+        <div id="results" class="results" style="display: none;">
+            <h2>Results:</h2>
+            <div id="dice-results" class="dice-results"></div>
+            <p id="total-result"></p>
+        </div>
+        
+        <div>
+            <div class="flex justify-between items-center mb-2">
+                <h2>Roll History:</h2>
+                <button id="clear-history" class="button outline-button">Clear History</button>
+            </div>
+            <div id="history" class="history"></div>
+        </div>
+    </main>
+    
+    <script src="/diceroller.js"></script>
+    <script src="/navbar.js"></script>
+    
+    
+</body>
+</html>
