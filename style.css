@@ -89,10 +89,6 @@ body {
 
 @media (max-width: 768px) {
 
-    body {
-        padding-top: 70px;
-    }
-
     .navbar-menu {
         display: none;
         flex-direction: column;
