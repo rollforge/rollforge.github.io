@@ -122,9 +122,124 @@ nav ul li a:hover {
     display: none;
 }
 
-@media (max-width: 768px) {
+footer h4 {
+    color: #ccc;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 5px;
+    background-color: #151515;
+}
 
-   /* Active Nav Properties */
+/*-------------------------------- Estilização da Área de Serviços: .services ---------------------------------*/
+
+@media screen and (max-width: 1360px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #preloader{
+        background-size: 10%;
+    }
+
+/*--------------------------- Heading Section ------------------------------*/
+
+    header {
+        width: 100%;
+    }
+
+    
+    .announcement {
+        display: none;
+    }
+
+    nav {
+        padding: 45px;
+    }
+
+    .logo {
+        margin: auto;
+        width: 70px;
+    }
+
+
+    .content-sign-in{
+        position: absolute; 
+        top: 38%;
+        right: 35%;
+        transform: translateY(-26%);
+    }
+
+    .boxes {
+        flex-direction: column;
+        padding: 50px;
+        margin-top: 0;
+    }
+
+    .contact-us {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .main {
+        flex-direction: column;
+        justify-content: none;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 60px;
+        margin-top: 15px;
+    }
+
+    .nav-login-buttons {
+        display: none;
+    }
+
+    .menumobile {
+        display: block;
+        z-index: 5;
+        border-top: 6px solid #000;
+    }
+
+    .menumobile::after,
+    .menumobile::before{
+        width: 40px;
+        height: 6px;
+    }
+
+    .nav-list {
+        position: fixed;
+        display: flex;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 1000vh;
+        background: #ffffff;
+        clip-path: circle(100px at 90% -150%);
+        transition: .4s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+        z-index: 4;
+        text-align: center;
+    }
+
+    .nav-list li {
+        display: flex;
+        justify-content: space-around;
+        margin-inline: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Active Nav Properties */
 
 
     .nav.active .nav-login-buttons-alt {
@@ -158,4 +273,32 @@ nav ul li a:hover {
         margin-top: -5px;
     }
 }
+
+@media screen and (max-width: 850px){
+
+    .content-sign-in{
+        position: absolute;
+        top: 36%;
+        right: 29%;
+        transform: translateY(-26%);
+    }
+
+    #preloader{
+        background-size: 9%;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+
+    .content-sign-in{
+        position: absolute;
+        top: 36%;
+        right: 16%;
+        transform: translateY(-26%);
+    }
+
+    #preloader{
+        background-size: 9%;
+    }
 }
