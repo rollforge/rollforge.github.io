@@ -68,7 +68,7 @@ const diceType = document.getElementById('dice-type');
                 isRolling = false;
                 rollButton.textContent = 'Roll Dice';
                 rollButton.disabled = false;
-            }, 1000);
+            }, 100);
         }
 
         function displayResults(results, mod, hasDisadvantage) {

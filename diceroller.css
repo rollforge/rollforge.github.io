@@ -38,6 +38,7 @@ h1, h2 {
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-bottom: 2%;
 }
 
 .switch input {
@@ -81,7 +82,7 @@ input:checked + .slider:before {
 .button {
     width: 100%;
     padding: 0.5rem 1rem;
-    background-color: var(--accent);
+    background-color: var(--primary);
     color: var(--primary-foreground);
     border: none;
     border-radius: var(--radius);
@@ -98,7 +99,7 @@ input:checked + .slider:before {
 }
 
 .button:hover {
-    background-color: var(--accent-dark);
+    background-color: var(--accent);
 }
 
 .button:disabled {
@@ -144,6 +145,25 @@ input:checked + .slider:before {
     padding: 0.5rem;
     margin-bottom: 0.5rem;
     color: var(--primary);
+}
+
+.clear-history{
+    background-color: var(--accent);
+    color: var(--primary-foreground);
+    text-decoration: none;
+    border: transparent;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 9px;
+    transition: .5s ease;
+    margin-bottom: 10px;
+}
+
+.clear-history:hover{
+    background-color: var(--accent-dark);
+    border: transparent;
+    color: var(--primary-foreground);
+    cursor: pointer
 }
 
 .flex {
